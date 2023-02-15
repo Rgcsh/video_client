@@ -19,7 +19,7 @@
 
 ## 涉及项目如下(3个项目)
 
-### 监控服务端(video_server项目)
+### 监控服务端(video_server项目)[本项目]
 
 #### 功能点
 
@@ -35,7 +35,7 @@
 * 应用层协议:MQTT,HTTP
 * 传输层协议:UDP,TCP
 
-### 监控客户端(video_client项目)[本项目]
+### 监控客户端(video_client项目)
 
 #### 功能点
 
@@ -67,17 +67,25 @@
 * 传输层协议:TCP
 * 硬件:ESP32-CAM开发套件
 
-### 服务间数据流向图
+## 服务间数据流向图
 
 ![img.png](docs/img.png)
 
-### 相关链接:
+## 相关链接:
 
 * [基于ESP8266的MicroPython连接MQTT服务器](https://blog.csdn.net/zhuwade/article/details/121792955)
 * [micropython-lib](https://github.com/micropython/micropython-lib/tree/master/micropython)
 * [GoCV MORE EXAMPLES](https://gocv.io/writing-code/more-examples/)
 
-### bug记录
+## bug记录
 
 * udp发送数据失败,报错 ```Message too long```,错误原因:系统限制UDP发送数据字节数大小 解决方法:修改系统配置  ```ysctl -w net.inet.udp.maxdgram=65507```
 * [相关链接](https://www.cnblogs.com/yajunLi/p/6595509.html)
+
+## 效果演示
+
+GIF图
+
+## 此项目使用前准备
+
+* 将utils/constant/constant.go文件的配置按需更改即可
