@@ -1,4 +1,4 @@
-// 
+//
 // All rights reserved
 // create time '2023/2/14 16:48'
 //
@@ -14,6 +14,7 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
+	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"github.com/asmcos/requests"
@@ -30,7 +31,9 @@ import (
 func FirstLineButton() (*canvas.Image, *fyne.Container) {
 	img := canvas.NewImageFromResource(theme.FyneLogo())
 	img.FillMode = canvas.ImageFillOriginal
-	first := container.NewGridWithColumns(1, img)
+	//first := container.NewGridWithColumns(1, img)
+	first := container.New(
+		layout.NewGridWrapLayout(fyne.NewSize(500, 500)), img)
 	return img, first
 }
 
